@@ -7,7 +7,7 @@
 
 ## New
 
-[![Gem](https://img.shields.io/gem/v/runfile.svg)]()
+[![Gem](https://img.shields.io/gem/v/runfile.svg)](http://badge.fury.io/rb/runfile)
 [![Travis](https://img.shields.io/travis/DannyBen/runfile.svg)](https://travis-ci.org/DannyBen/runfile)
 [![Code Climate](https://img.shields.io/codeclimate/github/DannyBen/runfile.svg)](https://codeclimate.com/github/DannyBen/runfile)
 [![Gem](https://img.shields.io/gem/dt/runfile.svg)](https://rubygems.org/gems/runfile)
