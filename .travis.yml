@@ -1,0 +1,9 @@
+language: ruby
+
+rvm:
+  - "2.4.1"
+
+notifications:
+  email: false
+
+script: docker-compose --version
