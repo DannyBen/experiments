@@ -4,8 +4,12 @@
 @import "{{ site.theme }}";
 
 .page-header {
-  color: #fff;
+  color: #111;
   text-align: center;
   background-color: #159957;
   background-image: linear-gradient(120deg, #F1C232, #EFC64C);
+
+  h1 {
+    text-transform: uppercase;
+  }
 }
