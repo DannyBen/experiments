@@ -6,5 +6,4 @@ image_resource:
   source: {repository: alpine}
 
 run:
-  path: echo
-  args: [hello world i was updated one more time]
+  path: do_something.sh
