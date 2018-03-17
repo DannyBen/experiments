@@ -6,4 +6,5 @@ image_resource:
   source: {repository: alpine}
 
 run:
-  path: experiments-repo/concourse/do_something.sh
+  path: ls
+  args: [-laR]
