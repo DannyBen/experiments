@@ -10,4 +10,4 @@ inputs:
 
 run:
   path: sh 
-  args: [experiments-repo/concourse/so_something.sh]
+  args: [./experiments-repo/concourse/so_something.sh]
