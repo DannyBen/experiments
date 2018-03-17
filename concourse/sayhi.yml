@@ -5,6 +5,9 @@ image_resource:
   type: docker-image
   source: {repository: alpine}
 
+inputs:
+- experiments-repo
+
 run:
   path: ls
   args: [-laR]
