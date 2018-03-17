@@ -2,4 +2,4 @@
 
 cd rigit
 bundle
-run spec
+bundle exec run spec
