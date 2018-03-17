@@ -1,3 +1,5 @@
 #!/bin/sh
 
-echo "rubytest running"
+cd rigit
+bundle
+run spec
