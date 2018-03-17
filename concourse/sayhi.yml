@@ -6,7 +6,7 @@ image_resource:
   source: {repository: alpine}
 
 inputs:
-- experiments-repo
+- name: experiments-repo
 
 run:
   path: ls
