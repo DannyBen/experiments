@@ -9,5 +9,7 @@ inputs:
 - name: experiments-repo
 
 run:
-  path: sh 
-  args: [./experiments-repo/concourse/so_something.sh]
+  # path: sh 
+  # args: [./experiments-repo/concourse/so_something.sh]
+  path: ls
+  args: [-laR]
