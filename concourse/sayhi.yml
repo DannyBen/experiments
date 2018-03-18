@@ -9,7 +9,7 @@ inputs:
 - name: experiments-repo
 
 outputs:
-- output
+- name: output
 
 run:
   path: experiments-repo/concourse/do_something.sh
