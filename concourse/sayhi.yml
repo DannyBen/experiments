@@ -8,5 +8,8 @@ image_resource:
 inputs:
 - name: experiments-repo
 
+outputs:
+- output
+
 run:
   path: experiments-repo/concourse/do_something.sh
