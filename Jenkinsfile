@@ -1,19 +1,22 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'dannyben/docker-git-compose'
+    }
+    
+  }
   stages {
     stage('Build') {
-      parallel {
-        stage('Build') {
-          steps {
-            echo 'Building..'
-            echo 'second message'
-          }
+      agent {
+        docker {
+          image 'dannyben/docker-git-compose'
         }
-        stage('') {
-          steps {
-            echo 'building another thing'
-          }
-        }
+        
+      }
+      steps {
+        echo 'Building..'
+        sh '''docker -v
+docker-compose -v'''
       }
     }
     stage('Test') {
