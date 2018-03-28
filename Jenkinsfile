@@ -15,18 +15,12 @@ pipeline {
       }
       steps {
         echo 'Building..'
-        sh '''docker -v
-docker-compose -v'''
+        sh 'docker -v && docker-compose -v'
       }
     }
     stage('Test') {
       steps {
         echo 'Testing..'
-      }
-    }
-    stage('Deploy') {
-      steps {
-        echo 'Deploying....'
       }
     }
   }
