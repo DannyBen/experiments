@@ -1,10 +1,10 @@
 pipeline {
-  agent {
-    docker {
-      image 'dannyben/docker-git-compose'
-    }
-    
-  }
+  // agent {
+  //   docker {
+  //     image 'dannyben/docker-git-compose'
+  //   }
+  //   
+  // }
   stages {
     stage('Build') {
       agent {
