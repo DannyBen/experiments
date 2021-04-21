@@ -7,27 +7,32 @@ jobs:
   test:
     name: Ruby ${{ matrix.ruby }}
     runs-on: ubuntu-latest
-    # strategy:
-    #   matrix: { ruby: ['2.4', '2.5', '3.0'] }
+    strategy:
+      matrix: { ruby: ['2.4', '2.5', '3.0'] }
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    # - name: Setup Ruby
-    #   uses: ruby/setup-ruby@v1
-    #   with: 
-    #     ruby-version: '${{ matrix.ruby }}'
-    #     bundler-cache: true
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with: 
+        ruby-version: '${{ matrix.ruby }}'
+        bundler-cache: true
 
-    # - name: Run tests
-    #   run: ruby test.rb
+    - name: Update system
+      run: sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y
 
-    - name: Build docker images
-      run: docker-compose build
+    - name: Run tests
+      run: ruby test.rb
 
-    - name: Test ruby 2
-      run: docker-compose run ruby2
+    # The below uses docker to perform the same tests
 
-    - name: Test ruby 3
-      run: docker-compose run ruby3
+    # - name: Build docker images
+    #   run: docker-compose build
+
+    # - name: Test ruby 2
+    #   run: docker-compose run ruby2
+
+    # - name: Test ruby 3
+    #   run: docker-compose run ruby3
