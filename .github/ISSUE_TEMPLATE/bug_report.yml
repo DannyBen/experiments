@@ -7,13 +7,15 @@ body:
   - type: dropdown
     id: version
     attributes:
-      label: Version
+      label: Bashly Version
       description: What version of bashly are you running?
       options:
         - Latest Ruby Gem
         - Latest Docker Image
         - Edge Ruby Gem
         - Edge Docker Image
+        - Older Ruby Gem
+        - Older Docker Image
     validations:
       required: true
 
@@ -21,7 +23,7 @@ body:
     id: description
     attributes:
       label: Description
-      description: Describe the bug
+      description: Describe the bug.
     validations:
       required: true
   
@@ -29,7 +31,7 @@ body:
     id: reproduction
     attributes:
       label: Reproduction Steps
-      description: Provide the minimal set of steps required to reproduce the bug, including a `bashly.yml` if relevant
+      description: Provide the minimal set of steps required to reproduce the bug, including a `bashly.yml` if relevant.
     validations:
       required: true
 
@@ -37,12 +39,10 @@ body:
     id: actual
     attributes:
       label: Actual Behavior
-    validations:
-      required: true
+      description: What happened?
 
   - type: textarea
     id: expected
     attributes:
       label: Expected Behavior
-    validations:
-      required: true
+      description: What did you expect would happen?
