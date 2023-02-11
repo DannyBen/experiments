@@ -28,7 +28,7 @@ body:
       required: true
 
   - type: textarea
-    id: bashly.yml
+    id: config
     attributes:
       label: Bashly.yml
       description: If relevant, paste the contents of the smallest `bashly.yml` needed to reproduce the problem.
