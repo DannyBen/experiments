@@ -7,10 +7,10 @@ jobs:
   test:
     name: Test
     runs-on: ubuntu-latest
+    env:
+      BRANCH_NAME: ${{ github.head_ref || github.ref_name }} 
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    env:
-      BRANCH_NAME: ${{ github.head_ref || github.ref_name }} 
     - name: Echo
       run: echo "$BRANCH_NAME"
