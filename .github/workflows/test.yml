@@ -11,6 +11,6 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
     - name: Echo
-      run:
-        - echo ${{ env.branch_name }}
-        - echo ${{ env.ref_name }}
+      run: |
+        echo ${{ env.branch_name }}
+        echo ${{ env.ref_name }}
