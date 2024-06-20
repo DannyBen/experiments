@@ -10,7 +10,7 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
+    env:
+      BRANCH_NAME: ${{ github.head_ref || github.ref_name }} 
     - name: Echo
-      run: |
-        echo ${{ env.branch_name }}
-        echo ${{ env.ref_name }}
+      run: echo "$BRANCH_NAME"
