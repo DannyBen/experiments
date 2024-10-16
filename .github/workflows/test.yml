@@ -7,21 +7,8 @@ jobs:
   test:
     name: Test
     runs-on: ubuntu-latest
-    env:
-      BRANCH_NAME: ${{ github.head_ref || github.ref_name }} 
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    - name: Echo
-      run: echo "$BRANCH_NAME"
-    - name: Install ImageMagick
-      run: |
-        wget https://imagemagick.org/download/ImageMagick.tar.gz
-        tar xvzf ImageMagick.tar.gz
-        cd ImageMagick-7.*
-        ./configure
-        make
-        sudo make install
-        sudo ldconfig /usr/local/lib
-        magick --version
-
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v3
