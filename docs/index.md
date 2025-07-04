@@ -20,7 +20,7 @@ Set your API key
 
 ## Commands
 
-- [download](cli%20download) - Download a file
-- [upload](cli%20upload) - Upload a file
+- [download](cli%20download.md) - Download a file
+- [upload](cli%20upload.md) - Upload a file
 
 
