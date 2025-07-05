@@ -1,39 +1,41 @@
-# cli upload
+# rush add
 
-Upload a file
+Register a local repository.  
+  
+This command adds the specified path to the configuration file.
 
 | Attributes       | &nbsp;
 |------------------|-------------
-| Alias:           | u
+| Alias:           | a
 
 ## Usage
 
 ```bash
-cli upload SOURCE [OPTIONS]
+rush add REPO PATH
+```
+
+## Examples
+
+```bash
+rush add default ~/rush-repos/default
 ```
 
 ## Arguments
 
-#### *SOURCE*
+#### *REPO*
 
-File to upload
-
-| Attributes      | &nbsp;
-|-----------------|-------------
-| Required:       | ✓ Yes
-
-## Options
-
-#### *--user, -u USER*
-
-Username to use for logging in
+Repository name.
 
 | Attributes      | &nbsp;
 |-----------------|-------------
 | Required:       | ✓ Yes
 
-#### *--password, -p PASSWORD*
+#### *PATH*
 
-Password to use for logging in
+Path to the repository.
+
+| Attributes      | &nbsp;
+|-----------------|-------------
+| Required:       | ✓ Yes
 
 

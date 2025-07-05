@@ -1,0 +1,81 @@
+# rush clone
+
+Clone a GitHub package repository.  
+  
+This command clones the repository and registers it in the configuration file.
+
+## Usage
+
+```bash
+rush clone GITHUB_USER [PATH] [OPTIONS]
+```
+
+## Examples
+
+```bash
+rush clone bobby
+```
+
+```bash
+rush clone bobby --default
+```
+
+```bash
+rush clone bobby/bobs-repo ./repos/bobby --ssh
+```
+
+```bash
+rush clone bobby --name sample --ignore
+```
+
+## Dependencies
+
+#### *git*
+
+
+
+## Arguments
+
+#### *GITHUB_USER*
+
+Github user.  
+  
+This user is expected to have a repository named `rush-repo`.  
+  
+If you need to use a different name, use the `user/repo` syntax.
+
+| Attributes      | &nbsp;
+|-----------------|-------------
+| Required:       | ✓ Yes
+
+#### *PATH*
+
+Local path to clone the repository into.  
+  
+Default: ~/rush-repos/\<github_user\>/\<github_repo\>
+
+## Options
+
+#### *--ssh, -s*
+
+Clone using SSH instead of HTTPS.
+
+#### *--default, -d*
+
+Set this as the default repository (same as `--name default`).
+
+#### *--name, -n NAME*
+
+Name to use in the config file.  
+  
+Default: GitHub user
+
+#### *--shallow, -w*
+
+Perform a shallow clone, instead of the default full clone.
+
+#### *--ignore, -i*
+
+Ignore (do not clone) if a repository with this name exists.
+
+
